@@ -12,15 +12,12 @@ class Day1:
                 self.right_list.append(int(r))
 
     def part1(self):
-        p1_left = self.left_list
-        p1_right = self.right_list
-            
-        p1_left.sort()
-        p1_right.sort()
+        self.left_list.sort()
+        self.right_list.sort()
 
         distances = 0
-        for i in range(len(p1_left)):
-            distances += (abs(p1_left[i]-p1_right[i]))
+        for i in range(len(self.left_list)):
+            distances += (abs(self.left_list[i]-self.right_list[i]))
         
         print(distances)
     
