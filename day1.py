@@ -29,6 +29,22 @@ class Day1:
         
         print(similarity_score)
 
+    def both_parts(self):
+        self.left_list.sort()
+        self.right_list.sort()
+
+        distances = 0
+        similarity_score = 0
+
+        for i in range(len(self.left_list)):
+            distances += (abs(self.left_list[i]-self.right_list[i]))
+            loc_id_count = self.right_list.count(self.left_list[i])
+            similarity_score += self.left_list[i] * loc_id_count
+        
+        print(f'part 1 result is: {distances} and part 2 result is: {similarity_score}')
+
+
 puzzle = Day1('inputs/day1.txt')
-puzzle.part1()
-puzzle.part2()
+#puzzle.part1()
+#puzzle.part2()
+puzzle.both_parts()
