@@ -1,3 +1,5 @@
+import time
+
 class Day2:
 
     def __init__(self, filename):
@@ -97,7 +99,10 @@ def problem_dampener(line: list[int]) -> bool:
             return True
     return False
 
+start = time.time()
 puzzle = Day2('inputs/day2.txt')
 #puzzle.part1()
 #puzzle.part2()
 puzzle.both_parts()
+end = time.time()
+print(f'Elapsed time: {end - start}s')

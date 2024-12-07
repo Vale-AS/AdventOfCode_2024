@@ -1,4 +1,5 @@
 import time
+
 class Day4:
     def __init__(self, filename):
         with open(filename) as f:
@@ -110,16 +111,10 @@ def check_for_mas(square, i, j):
         return True
     return False
 
-
 start = time.time()
-puzzle1 = Day4('inputs/day4.txt')
-puzzle1.part1()
-puzzle1.part2()
-end = time.time()
-print(f'Elapsed time: {end - start}s')
-
-start = time.time()
-puzzle2 = Day4('inputs/day4.txt')
-puzzle2.both_parts()
+puzzle = Day4('inputs/day4.txt')
+#puzzle.part1()
+#puzzle.part2()
+puzzle.both_parts()
 end = time.time()
 print(f'Elapsed time: {end - start}s')

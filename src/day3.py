@@ -1,4 +1,5 @@
 import re
+import time
 
 class Day3:
 
@@ -80,7 +81,10 @@ def check_if_mul(line) -> tuple[bool, int]:
         res = int(nums[0]) * int(nums[1])
     return is_mul, res
 
+start = time.time()
 puzzle = Day3('inputs/day3.txt')
 #puzzle.part1()
 #puzzle.part2()
 puzzle.both_parts()
+end = time.time()
+print(f'Elapsed time: {end - start}s')

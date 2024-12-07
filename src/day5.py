@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 class Day5:
     def __init__(self, filename):
@@ -85,8 +86,10 @@ def correct_ordering(upd, rules):
     correct_update = [t[0] for t in order]
     return correct_update[int(np.floor(len(correct_update)/2))]
     
-
+start = time.time()
 puzzle = Day5('inputs/day5.txt')
 #puzzle.part1()
 #puzzle.part2()
 puzzle.both_parts()
+end = time.time()
+print(f'Elapsed time: {end - start}s')

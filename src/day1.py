@@ -1,3 +1,5 @@
+import time
+
 class Day1:
 
     def __init__(self, filename):
@@ -44,7 +46,10 @@ class Day1:
         print(f'part 1 result is: {distances} and part 2 result is: {similarity_score}')
 
 
+start = time.time()
 puzzle = Day1('inputs/day1.txt')
 #puzzle.part1()
 #puzzle.part2()
 puzzle.both_parts()
+end = time.time()
+print(f'Elapsed time: {end - start}s')
