@@ -60,8 +60,6 @@ def calc_neighbors(map, th):
 
 start = time.time()
 puzzle = Day10("inputs/day10.txt")
-#puzzle.part1()
-#puzzle.part2()
 puzzle.both_parts()
 end = time.time()
 print(f'Elapsed time: {end - start}s')
