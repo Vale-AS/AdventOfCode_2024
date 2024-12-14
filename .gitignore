@@ -11,3 +11,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Day 14 images
+images/
